@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@keyframes spin-slow {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-dot {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+.animate-bounce-dot {
+  animation: bounce-dot 2s ease-in-out infinite;
+}
+
+.delay-1000 {
+  animation-delay: -1s;
+}
