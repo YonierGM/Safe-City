@@ -1,10 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import AuthRoutes from "./modules/auth/routes/AuthRoutes";
-import EmployeeRoutes from "./modules/users/routes/EmployeeRoutes";
 import ProtectedRoute from "./modules/core/utils/ProtectedRoute";
 import { useAuthContext } from './modules/context/AuthContext';
 import { Toaster } from 'react-hot-toast';
-import HomeRoutes from "./modules/home/routes/HomeRoutes";
+import HomeRoutes from "./modules/dashboard/routes/HomeRoutes";
 import { ResetPassword } from "./modules/auth/pages/ResetPassword"; // 👈 importa directamente
 import { ForgotPassword } from "./modules/auth/pages/ForgotPassword";
 
@@ -16,7 +15,7 @@ function App() {
       <Toaster position="top-center" />
       <Routes>
         {/* Redirección raíz */}
-        <Route path="/" element={<Navigate to={isAuthenticated ? "/home" : "/login"} replace />} />
+        <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} replace />} />
 
         {/* Ruta pública para reset-password */}
         <Route path="/reset-password" element={<ResetPassword />} />
@@ -26,24 +25,15 @@ function App() {
         {/* Rutas de autenticación */}
         <Route
           path="/*"
-          element={isAuthenticated ? <Navigate to="/home" replace /> : <AuthRoutes />}
+          element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <AuthRoutes />}
         />
 
         {/* Rutas protegidas */}
         <Route
-          path="/home/*"
+          path="/dashboard/*"
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
               <HomeRoutes />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/employees/*"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <EmployeeRoutes />
             </ProtectedRoute>
           }
         />

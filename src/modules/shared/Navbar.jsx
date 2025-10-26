@@ -119,7 +119,7 @@ export function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                to="/home/categories"
+                                                to="/dashboard/categories"
                                                 className="flex items-center p-2  text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                             >
                                                 <MdOutlineCategory className="text-[23px]" />
@@ -145,7 +145,7 @@ export function Navbar() {
                                 <div className="options-user flex flex-col gap-4 justify-between h-full">
                                     <li>
                                         <Link
-                                            to="/home/incidentes"
+                                            to="/dashboard/incidentes"
                                             className="flex items-center p-2  text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                         >
                                             <GoAlert className="text-xl" />
@@ -166,7 +166,7 @@ export function Navbar() {
                                             <span className="ms-2 text-lg font-normal truncate w-40 block">
                                                 {user?.email || "Usuario no disponible"}
                                             </span>
-                                            <Link to="/home/forgot-password">
+                                            <Link to="/dashboard/forgot-password">
                                                 <RiExpandUpDownLine
                                                     className="text-xl"
                                                     title="Configuraciones"

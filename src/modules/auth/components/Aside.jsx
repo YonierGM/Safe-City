@@ -19,7 +19,6 @@ export function Aside({ title, description, phrase, urlImage }) {
                 onLoad={() => setImageLoaded(true)}
             />
 
-            {/* Capa oscura */}
             <div className="absolute inset-0 bg-black opacity-30 rounded-tr-2xl rounded-br-2xl"></div>
 
             {/* Contenido */}

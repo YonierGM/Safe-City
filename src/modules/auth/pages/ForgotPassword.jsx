@@ -1,15 +1,12 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForgotPassword } from "../hooks/useForgotPassword";
-
 import { Aside } from "../components/Aside";
-
 import { forgotPasswordSchema } from "../schemas/forgotPasswordSchema";
 import { useAuthContext } from "../../context/AuthContext";
 import { Spinner } from "../../shared/Spinner";
 
 export function ForgotPassword() {
-
     const { forgotPasswordHook, loading, error } = useForgotPassword();
     const { token, logout, loadingLogout } = useAuthContext();
 

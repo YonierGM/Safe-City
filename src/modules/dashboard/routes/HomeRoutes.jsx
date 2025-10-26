@@ -17,7 +17,7 @@ const HomeRoutes = () => {
                     <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/categories" element={<Categories />} />
                     <Route path="/incidentes" element={<Incidents />} />
-                    <Route path="*" element={<Navigate to="/home" replace />} />
+                    <Route path="*" element={<Navigate to="/dashboard" replace />} />
                 </Routes>
             </div>
         </section>

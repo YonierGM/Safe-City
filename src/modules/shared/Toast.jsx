@@ -29,10 +29,9 @@ const showToast = (message) => {
                 </div>
             </div>
 
-            {/* Botón cerrar */}
             <div className="flex border-l border-gray-200 dark:border-gray-700">
                 <button
-                    onClick={() => toast.dismiss(t.id)} // se cierra al instante
+                    onClick={() => toast.dismiss(t.id)}
                     className="w-full border border-transparent rounded-none rounded-r-xl p-3 flex items-center justify-center text-sm font-medium text-black hover:text-black focus:outline-none cursor-pointer"
                 >
                     X

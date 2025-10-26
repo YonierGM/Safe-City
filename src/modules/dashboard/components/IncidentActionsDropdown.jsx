@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { ActionsDropdown } from "./ActionsDropdown";
-import { useCategoriesContext } from "../../context/CategoriesContext";
 import { useIncidentsContext } from "../../context/IncidentsContext";
 import { ModalDetailIncident } from "./ModalDetailIncident";
-import { ModalUpdateIncident } from "./ModalUpdateIncident";
 import { ModalCreateIncident } from "./ModalCreateIncident";
 
 export function IncidentActionsDropdown({ incident }) {
