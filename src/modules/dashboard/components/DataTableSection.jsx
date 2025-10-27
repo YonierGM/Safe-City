@@ -45,7 +45,7 @@ export function DataTableSection({
                     <>
                         <button
                             onClick={openModal}
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-medium bg-black text-white rounded-lg hover:bg-gray-900"
+                            className="flex items-center gap-2 px-4 py-2 text-sm font-medium bg-black text-white rounded-lg cursor-pointer"
                         >
                             {buttonText}
                         </button>
