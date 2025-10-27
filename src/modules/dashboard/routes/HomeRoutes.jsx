@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Navbar } from "../../shared/Navbar";
-import { Categories } from "../pages/categories";
+import { Categories } from "../pages/Categories";
 import { ForgotPassword } from "../../auth/pages/ForgotPassword";
 import { Incidents } from "../pages/Incidents";
 

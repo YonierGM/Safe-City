@@ -24,13 +24,13 @@ export function Home() {
     const { incidents } = useIncidentsContext();
     const { categories } = useCategoriesContext();
 
-    // 🧮 Calcular métricas
+    // Calcular métricas
     const stats = useMemo(() => {
         if (!incidents?.length || !categories?.length) return null;
 
         const totalIncidents = incidents.length;
 
-        // 🕒 Tiempo promedio de resolución (reported_at → resolved_at)
+        // Tiempo promedio de resolución (reported_at → resolved_at)
         const resolvedIncidents = incidents.filter(
             (i) => i.attributes?.resolved_at && i.attributes?.reported_at
         );
@@ -120,10 +120,6 @@ export function Home() {
         };
     }, [incidents, categories]);
 
-    useEffect(() => {
-        console.log("📊 Datos cargados:", stats);
-    }, [stats]);
-
     if (loading)
         return (
             <div className="space-y-4">
@@ -138,7 +134,7 @@ export function Home() {
     return (
         <div className="p-6 space-y-6">
             <h2 className="text-2xl font-semibold">
-                👋 Hola {user?.name}, bienvenido al panel de administración
+                Hola {user?.name}, bienvenido al panel de administración
             </h2>
 
             {/* === TARJETAS DE RESUMEN === */}

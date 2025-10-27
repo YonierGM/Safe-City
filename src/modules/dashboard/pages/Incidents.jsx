@@ -1,14 +1,13 @@
 import { IoAdd } from "react-icons/io5";
 import { DataTableSection } from "../components/DataTableSection";
-import { SlOptionsVertical } from "react-icons/sl";
 import { ModalCreateIncident } from "../components/ModalCreateIncident";
 import { useIncidentsContext } from "../../context/IncidentsContext";
 import { useAuthContext } from "../../context/AuthContext";
 import { IncidentActionsDropdown } from "../components/IncidentActionsDropdown";
 
 export function Incidents() {
-    const { user, isAdmin } = useAuthContext();
-    const { incidents, loading, showSkeleton, error, createIncident, deleteIncident } = useIncidentsContext();
+    const { isAdmin } = useAuthContext();
+    const { incidents, showSkeleton, error } = useIncidentsContext();
 
     return (
         <DataTableSection
